@@ -1,0 +1,54 @@
+# Python compilation cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+ENV/
+lib/
+lib64/
+
+# Django local database
+db.sqlite3
+*.db
+
+# Sensitive credentials and secret environment variables
+.env
+*.env
+local_settings.py
+
+# Media files uploaded by users
+media/
+
+# Static files collected during deployment
+staticfiles/
+static_root/
+
+# Logs
+*.log
+
+# Testing and coverage
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# IDEs and Text Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS-specific temporary files
+.DS_Store
+Thumbs.db
