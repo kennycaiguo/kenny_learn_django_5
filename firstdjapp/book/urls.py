@@ -15,20 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.http import HttpResponse
-from django.urls import path,include,reverse
+from django.urls import path
+from book.views import show_books,query_book_by_id,get_book_by_id
 
+# 指定应用程序名称，也就是应用命名空间,在团队开发的时候防止命名冲突
+app_name = 'book'
 
-def index(request):
-    print(reverse('book:show_books'))
-    print(reverse('movie:query_movie')+"?index=6") # query string 方式路由反转传参
-    print(reverse('book:get_book_by_id',kwargs={'bid':6})) # 路径参数的路由反转传参
-    return HttpResponse("<html><body>Welcome to index</body></html>")
 urlpatterns = [
-    path('', index),
-    path('admin/', admin.site.urls),
-    # 注册book路由
-    path('book/', include('book.urls')),
-    # 注册movie路由
-    path('movie/', include('movie.urls')),
+
+    path('', show_books, name='show_books'),
+    path('query/', query_book_by_id,name='query_by_id'),
+    path('item/<int:bid>/',get_book_by_id,name='get_book_by_id'),
 ]
