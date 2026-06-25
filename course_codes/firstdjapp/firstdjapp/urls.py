@@ -32,4 +32,6 @@ urlpatterns = [
     path('book/', include('book.urls')),
     # 注册movie路由
     path('movie/', include('movie.urls')),
+    # 注册famous路由
+    path('famous/', include('famous.urls')),
 ]

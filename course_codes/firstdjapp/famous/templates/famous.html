@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>四大名著</title>
+</head>
+<body>
+    <h2>四大名著</h2>
+    <hr>
+    {% for book in books %}
+        <dl>
+            <dt><h3>{{ book.name }}</h3></dt>
+            <dd>作者:{{ book.author }}</dd>
+            <dd>出版年份:{{ book.year }}</dd>
+            <dd>价格:{{ book.price }}</dd>
+        </dl>
+    {% endfor %}
+</body>
+</html>

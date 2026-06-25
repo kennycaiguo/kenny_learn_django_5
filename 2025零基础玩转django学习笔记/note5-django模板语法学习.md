@@ -156,13 +156,59 @@
 
 ![image-20260625141855987](./note5-django模板语法学习.assets/image-20260625141855987.png)
 
-
-
-
-
 # 3.常用标签
 
+## 在模板里面可以使用python代码，但是必须放在{%%}里面，可以使用循环，推荐，操作符号等等一系列的语法，在调用方法或者函数时不要使用小括号
 
+![image-20260625145818396](./note5-django模板语法学习.assets/image-20260625145818396.png)
+
+![image-20260625145941193](./note5-django模板语法学习.assets/image-20260625145941193.png)
+
+![image-20260625150039539](./note5-django模板语法学习.assets/image-20260625150039539.png)
+
+![image-20260625150116728](./note5-django模板语法学习.assets/image-20260625150116728.png)
+
+![image-20260625151027371](./note5-django模板语法学习.assets/image-20260625151027371.png)
+
+![image-20260625151151141](./note5-django模板语法学习.assets/image-20260625151151141.png)
+
+![image-20260625151243484](./note5-django模板语法学习.assets/image-20260625151243484.png)
+
+![image-20260625151336914](./note5-django模板语法学习.assets/image-20260625151336914.png)
+
+## 演练，
+
+### 1.给我们的下面添加有famous应用程序，用来显示名著信息
+
+![image-20260625153320573](./note5-django模板语法学习.assets/image-20260625153320573.png)
+
+### 2.个famous模块添加一个urls.py和一个templates文件夹，用来存放这个路由相关的模板文件
+
+![image-20260625153521422](./note5-django模板语法学习.assets/image-20260625153521422.png)
+
+### 3.在默认应用程序的settings.py里面注册famous应用程序
+
+![image-20260625153646821](./note5-django模板语法学习.assets/image-20260625153646821.png)
+
+### 4.在firstdjapp/urls.py里面配置famous相关的路由
+
+![image-20260625153833559](./note5-django模板语法学习.assets/image-20260625153833559.png)
+
+### 5.转到famous/urls.py,首先添加命名空间，然后添加一条路由映射，注意此时我们视图函数还没有创建，我们马上就会创建它
+
+![image-20260625154148144](./note5-django模板语法学习.assets/image-20260625154148144.png)
+
+### 6.回到famous/views.py,我们来创建这个index函数
+
+![image-20260625171825018](./note5-django模板语法学习.assets/image-20260625171825018.png)
+
+### 7.然后我们需要在famous/templates里面新建一个famous.html模板文件，在里面遍历整个列表，然后显示我们的数据
+
+![image-20260625172150480](./note5-django模板语法学习.assets/image-20260625172150480.png)
+
+### 运行程序，效果如下
+
+![image-20260625172205466](./note5-django模板语法学习.assets/image-20260625172205466.png)
 
 # 4.常用过滤器
 
