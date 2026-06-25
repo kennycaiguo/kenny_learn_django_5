@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path,include,reverse
+from django.shortcuts import render
 
 
 def index(request):
     print(reverse('book:show_books'))
     print(reverse('movie:query_movie')+"?index=6") # query string 方式路由反转传参
     print(reverse('book:get_book_by_id',kwargs={'bid':6})) # 路径参数的路由反转传参
-    return HttpResponse("<html><body>Welcome to index</body></html>")
+    return render(request,"index.html")
 urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),

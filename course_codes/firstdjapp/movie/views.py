@@ -19,3 +19,4 @@ def query_movie(request):
 
 def get_movie(request,mid):
     return HttpResponse(movies[mid])
+

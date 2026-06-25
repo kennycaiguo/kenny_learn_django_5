@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Book</title>
+</head>
+<body>
+   <h2 style="background-color: deeppink">Test Book</h2>
+   <p>{{ greeting }}</p>
+   <ul>
+       <li style="list-style: none"><h3>Author info</h3></li>
+       <li>Name:{{ author.name }}</li>
+       <li>Gender:{{ author.gender }}</li>
+       <li>Age:{{ author.age }}</li>
+   </ul>
+   <ol style="background-color: lightgray">
+       Fruits he likes:
+       <li>The Most:{{ like.0 }}</li>
+       <li>The Second:{{ like.1 }}</li>
+       <li>The Less:{{ like.2 }}</li>
+   </ol>
+<p>The Book he likes:{{ book }}</p>
+<p>{{ book.info }}</p>
+</body>
+</html>
